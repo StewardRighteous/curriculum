@@ -17,6 +17,21 @@ This section contains a general overview of topics that you will learn in this l
 
 Before we dive into workflows, take a minute to remind yourself about good commit messages. You can check the [Commit Messages lesson](https://www.theodinproject.com/lessons/foundations-commit-messages) for a reminder. This is a good time to draw particular attention to [Conventional Commits](https://www.conventionalcommits.org), a standard for commits that is gaining more and more popularity for collaborative projects. It helps to make sure your commit message gives a clear description of its purpose to anyone reading. Going forward, you may like to implement these (if you aren't already!), or at least be aware of them for when you read other repos.
 
+### Workflow diagram
+
+Here is a visual representation of the workflow with Git and GitHub and illustrates how changes flow between repositories during collaboration.
+
+<pre class="mermaid">
+
+graph TD;
+    A[Upstream Repository: TheOdinProject/curriculum] -->|git fetch upstream/main| B[Local Repository: main];
+    B -->|git checkout your_branch_name| C[Local Repository: your_branch_name];
+    C -->|git push origin your_branch_name| D[Your Fork on GitHub];
+    D -->|Create Pull Request to Upstream| E[Pull Request on GitHub];
+    E -->|Maintainers Merge PR to Upstream| A[Upstream Repository: TheOdinProject/curriculum];
+
+</pre>
+
 ### Assignment
 
 <div class="lesson-content__panel" markdown="1">
